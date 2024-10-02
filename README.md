@@ -1,4 +1,4 @@
-👋 20yo | CS Student 🎓 | Freiburg, 🇩🇪 🌍 | ⚽️ 🏌️‍♂️ 🎸 | ✨ driven by innovation and the urge to develop new things
+👋 21yo | CS Student 🎓 | Freiburg, 🇩🇪 🌍 | ⚽️ 🏌️‍♂️ 🎸 | ✨ driven by innovation and the urge to develop new things
 <!--
 **Jere2k03/Jere2k03** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

@@ -1,4 +1,16 @@
-👋 21yo | CS Student 🎓 | Freiburg, 🇩🇪 🌍 | ⚽️ 🏌️‍♂️ 🎸 | ✨ driven by innovation and the urge to develop new things
+# Hi, I'm Jeremias 👋
+
+🎓 21 y/o CS student from Freiburg, Germany
+
+✨ Passionate about building new things and driven by innovation
+
+⚽ 🏌️‍♂️ ♟️ 🎸 
+
+---
+
+### 🌐 Website
+Check out my website [here](https://jeremiasmatt.de/). 🚀
+
 <!--
 **Jere2k03/Jere2k03** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

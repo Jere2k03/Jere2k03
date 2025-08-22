@@ -1,0 +1,11 @@
+/* Custom Fonts */
+@font-face {
+    font-family: '';
+    src: url('assets/fonts/') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: '';
+}

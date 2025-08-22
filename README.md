@@ -1,6 +1,6 @@
 # Hi, I'm Jeremias 👋
 
-🎓 21 y/o CS student from Freiburg, Germany
+🎓 22 y/o CS student from Freiburg, Germany
 
 ✨ Passionate about building new things and driven by innovation
 

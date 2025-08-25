@@ -1,0 +1,32 @@
+# own
+images/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build output (falls ein Build-System im Einsatz ist)
+dist/
+build/
+out/
+.cache/
+.temp/
+
+# Logs
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Optional: Env-Dateien (falls du API Keys lokal nutzt)
+.env
+.env.local
+.env.*

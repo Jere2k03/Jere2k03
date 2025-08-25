@@ -1,11 +1,278 @@
-/* Custom Fonts */
-@font-face {
-    font-family: '';
-    src: url('assets/fonts/') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+/* =======================
+   Reset & Design Tokens
+   ======================= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+:root{
+  /* Colors */
+  --bg:#f8f9fb;
+  --card:#ffffff;
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --brand:#0073b1;
+
+  /* Effects & Radius */
+  --radius:16px;
+  --radius-sm:12px;
+  --shadow:0 8px 24px rgba(0,0,0,.06);
+
+  /* Spacing scale */
+  --s-0:0;
+  --s-1:0.25rem;
+  --s-2:0.5rem;
+  --s-3:0.75rem;
+  --s-4:1rem;
+  --s-5:1.25rem;
+  --s-6:1.5rem;
+  --s-8:2rem;
+
+  /* Typography */
+  --fs-100:.9rem;
+  --fs-200:1rem;
+  --fs-300:1.125rem;
+  --fs-400:clamp(1.2rem,2vw,1.4rem);
+  --fs-500:clamp(1.4rem,2.2vw,1.8rem);
+
+  --lh:1.6;
 }
 
-body {
-    font-family: '';
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0b0e14;
+    --card:#111827;
+    --ink:#e5e7eb;
+    --muted:#9ca3af;
+    --border:#1f2937;
+    --shadow:none;
+  }
+}
+
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Quicksand",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  line-height:var(--lh);
+  color:var(--ink);
+  background:var(--bg);
+  text-rendering:optimizeLegibility;
+}
+
+/* =======================
+   Links & Focus
+   ======================= */
+a{ color:inherit; text-decoration:none; }
+a:focus-visible, button:focus-visible{
+  outline:2px solid var(--brand);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* Links klar markieren */
+.ext-link {
+  color: var(--ink);                /* gleiche Farbe wie Text */
+  text-decoration: underline;       /* Unterstrich aktiv */
+  text-decoration-color: var(--ink); /* Unterstrich = gleiche Farbe */
+  text-underline-offset: 3px;
+  font-weight: 500; /* optional: leicht hervorheben */
+}
+
+.ext-link:hover,
+.ext-link:focus-visible {
+  color: var(--brand);               /* beim Hover deine Akzentfarbe */
+  text-decoration-color: var(--brand);
+}
+
+
+/* bricht den Teil nicht um: " – <Link>" bleibt in einer Zeile */
+.nowrap { white-space: nowrap; }
+
+
+/* =======================
+   Layout
+   ======================= */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:clamp(var(--s-4),2vw,var(--s-8));
+}
+
+.grid-layout{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:clamp(var(--s-4),2.5vw,var(--s-8));
+  min-height:calc(100vh - 120px);
+}
+
+@media (max-width:880px){
+  .grid-layout{ grid-template-columns:1fr; }
+}
+
+/* =======================
+   Sidebar (links)
+   ======================= */
+.sidebar{
+  position:sticky;
+  top:clamp(var(--s-2),1.5vw,var(--s-4));
+  align-self:start;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:clamp(var(--s-4),2vw,var(--s-6));
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.profile-pic{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:50% 25%; /* Ausschnitt feinjustiert */
+  display:block;
+  margin:0 auto var(--s-4);
+  border:3px solid var(--border);
+}
+
+.sidebar h1{
+  font-size:var(--fs-500);
+  margin:var(--s-1) 0 var(--s-3);
+  letter-spacing:.2px;
+}
+
+.sidebar p{
+  margin:var(--s-2) 0 var(--s-4);
+  color:var(--muted);
+  font-size:var(--fs-200);
+}
+
+/* Social Icons */
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:var(--s-4);
+  margin-top:var(--s-4);
+}
+
+.social-icons a{
+  width:44px;height:44px;
+  border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:transparent;
+  border:1px solid var(--border);
+  color:var(--ink);
+  font-size:1.25rem;
+  transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-icons a:hover{
+  background:var(--card);
+  color:var(--brand);
+  border-color:var(--brand);
+  transform:translateY(-2px);
+}
+.social-icons a:focus-visible{
+  box-shadow:0 0 0 3px color-mix(in oklab, var(--brand) 35%, transparent);
+}
+
+/* =======================
+   Content (rechts)
+   ======================= */
+.content{
+  display:grid;
+  gap:clamp(var(--s-4),2vw,var(--s-6));
+  align-content:start;
+}
+
+/* Einheitlicher Rahmen für alle Sektionen */
+.about,
+.education,
+.work{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:clamp(var(--s-4), 2.2vw, var(--s-6));
+  box-shadow:var(--shadow);
+}
+
+.about h2,
+.education h2,
+.work h2{
+  margin:0 0 var(--s-3) 0;
+  font-size:var(--fs-400);
+}
+
+.about p{
+  margin:var(--s-2) 0 var(--s-4);
+  font-size:var(--fs-300);
+  color:var(--ink);
+}
+
+/* =======================
+   Listen (Education & Work)
+   ======================= */
+.education ul,
+.work ul{
+  list-style:none;
+  padding:0;
+  margin:var(--s-2) 0 0 0;
+  display:grid;
+  gap:var(--s-3);
+}
+
+.education li,
+.work li{
+  display:grid;
+  gap:var(--s-1);
+  padding:var(--s-3);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  background:color-mix(in oklab, var(--card) 92%, var(--bg));
+}
+
+.education li strong,
+.work li strong{
+  font-weight:700;
+}
+
+/* =======================
+   Footer
+   ======================= */
+.site-footer{
+  max-width:1200px;
+  margin:var(--s-8) auto var(--s-6);
+  padding:0 clamp(var(--s-4),2vw,var(--s-8));
+  display:flex; gap:var(--s-4);
+  align-items:center; justify-content:space-between;
+  color:var(--muted); font-size:var(--fs-200);
+  border-top:1px solid var(--border);
+  padding-top:var(--s-4);
+}
+
+.site-footer a{
+  color:var(--muted);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.site-footer a:hover{ color:var(--ink); }
+
+/* =======================
+   Utilities
+   ======================= */
+.hidden{ display:none !important; }
+.center{ text-align:center; }
+
+/* =======================
+   Responsive Tweaks
+   ======================= */
+@media (max-width:880px){
+  .sidebar{ position:static; }
+  .site-footer{ flex-direction:column; align-items:flex-start; gap:var(--s-2); }
+}
+
+/* Bevorzugt: reduzierte Bewegungen */
+@media (prefers-reduced-motion:reduce){
+  *{ scroll-behavior:auto !important; }
+  .social-icons a{ transition:none; }
 }

@@ -1,18 +1,108 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <title>Jeremias Matt</title>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeremias Matt – Portfolio</title>
+  <meta name="description" content="Portfolio von Jeremias Matt: Projekte, Über mich und Kontakt." />
 
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32x32.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon_16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon_32x32.png" />
 
-    <link rel="stylesheet" href="index.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+
+  <link rel="stylesheet" href="index.css" />
 </head>
-
 <body>
-    <h1>Herzlich Willkommen auf meiner Webseite!</h1>
-</body>
 
+  <main id="main" class="container">
+    <div class="grid-layout">
+      
+      <!-- Linke Seite -->
+      <aside class="sidebar">
+        <img
+          src="/assets/images/jeremias_profil.jpeg"
+          alt="Profilfoto von Jeremias Matt"
+          class="profile-pic"
+        />
+        <h1>Jeremias Matt</h1>
+
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/jeremiasmatt" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/Jere2k03" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:mail@jeremiasmatt.de" aria-label="E-Mail">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+        </div>
+      </aside>
+
+      <!-- Rechte Seite -->
+      <section class="content">
+        <section class="about" aria-labelledby="about-title">
+          <h2 id="about-title">Über mich</h2>
+          <p>
+            Hier ein kurzer Text über dich – wer du bist, was du machst, deine Interessen
+            und deine Motivation.
+          </p>
+        </section>
+
+        <section class="education" aria-labelledby="education-title">
+            <h2 id="education-title">Ausbildung</h2>
+            <ul>
+                <li>
+                <strong>2022 – heute:</strong>
+                <span class="nowrap">
+                    B.Sc in Computer Science / IT-Automotive – <a class="ext-link" href="https://www.dhbw.de/" target="_blank" rel="noopener">
+                    Duale Hochschule Baden-Württemberg
+                    </a>
+                </span>
+                </li>
+                <li>
+                <strong>2013 – 2022:</strong>
+                <span class="nowrap">
+                    Abitur – <a class="ext-link" href="https://wentzingergym.de/" target="_blank" rel="noopener">
+                    Wentzinger-Gymnasium, Freiburg im Breisgau
+                    </a>
+                </span>
+                </li>
+            </ul>
+            </section>
+
+            <section class="work" aria-labelledby="work-title">
+            <h2 id="work-title">Berufserfahrung</h2>
+            <ul>
+                <li>
+                <strong>2022 – heute:</strong>
+                <span class="nowrap">
+                    Duales Studium – <a class="ext-link" href="https://www.marquardt.com/de/" target="_blank" rel="noopener">
+                    Marquardt Gruppe, Rietheim-Weilheim
+                    </a>
+                </span>
+                </li>
+            </ul>
+        </section>
+
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Jeremias Matt</p>
+    <a href="/privacy-policy/">Datenschutz</a>
+  </footer>
+
+</body>
 </html>

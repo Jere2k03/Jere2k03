@@ -20,7 +20,7 @@
 
 <div align="center">
 
-Curious for more? Find me here.
+Curious for more? Find me here (and say hi if you want). 🚀
 
 <a href="https://linkedin.com/in/jeremiasmatt">
   <picture>

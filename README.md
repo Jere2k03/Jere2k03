@@ -29,7 +29,7 @@ Curious for more? Find me here.
     <img alt="LinkedIn" src="./assets/btn-linkedin-fallback.svg" />
   </picture>
 </a>
-<a href="#">
+<a href="https://jeremiasmatt.de">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/btn-website-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/btn-website-light.svg" />

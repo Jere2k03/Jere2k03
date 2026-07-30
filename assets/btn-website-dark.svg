@@ -3,5 +3,5 @@
 <circle cx="25.0" cy="22.0" r="8.0" fill="none" stroke="#F2F2F2" stroke-width="1.2"/>
 <ellipse cx="25.0" cy="22.0" rx="3.36" ry="8.0" fill="none" stroke="#F2F2F2" stroke-width="1.2"/>
 <line x1="17.0" y1="22.0" x2="33.0" y2="22.0" stroke="#F2F2F2" stroke-width="1.2"/>
-<text x="44" y="27.0" font-size="14" fill="#F2F2F2">Website</text>
+<text x="44" y="27.0" font-size="14" fill="#F2F2F2">My Website</text>
 </svg>
